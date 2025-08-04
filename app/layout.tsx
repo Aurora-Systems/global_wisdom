@@ -14,7 +14,8 @@ const gentiumBookPlus = Gentium_Book_Plus({
 });
 
 const mont = Montserrat({
-  variable: "--font-montserrat"
+  variable: "--font-montserrat",
+  subsets:["latin"]
 })
 
 
@@ -31,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gentiumBookPlus.variable}`}>
+      <body className={`${mont.variable}`}>
         <Navbar/>
         {children}
         <Footer/>
