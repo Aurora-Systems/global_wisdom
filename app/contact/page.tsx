@@ -82,39 +82,42 @@ export default function Contact() {
                 <h2 className="h3 fw-bold mb-4 tp">Send Us a Message</h2>
                 <div>
                 <div className="row g-3 mb-3">
-                    <div className="col-md-6">
+                    <div className="col-sm">
                     <label className="form-label fw-medium text-navy">First Name</label>
-                    <input/>
+                    <input className="form-control bg-light" placeholder="John" name="full_name" required/>
                     </div>
-                    <div className="col-md-6">
-                    <label className="form-label fw-medium text-navy">Last Name</label>
-                    <div className="form-control bg-light">Your last name</div>
-                    </div>
+                   
                 </div>
                 
                 <div className="mb-3">
                     <label className="form-label fw-medium text-navy">Email</label>
-                    <div className="form-control bg-light">your.email@example.com</div>
+                    <input className="form-control bg-light" placeholder="john@email.com" name="email" required/>
                 </div>
                 
                 <div className="mb-3">
                     <label className="form-label fw-medium text-navy">Phone</label>
-                    <div className="form-control bg-light">Your phone number</div>
+                    <input type="tel" className="form-control bg-light" placeholder="078********" name="phone" required/>
                 </div>
                 
                 <div className="mb-3">
                     <label className="form-label fw-medium text-navy">Service Interest</label>
-                    <div className="form-control bg-light">Select a service</div>
+                    <select className="form-control" name="subject" required>
+                      <option value="publishing">Book Publishing</option>
+                    <option value="editing">Editorial Services</option>
+                    <option value="marketing">Book Marketing</option>
+                    <option value="distribution">Distribution</option>
+                    <option value="consultation">Publishing Consultation</option>
+                    <option value="other">Other</option>
+                    </select>
                 </div>
                 
                 <div className="mb-3">
                     <label className="form-label fw-medium text-navy">Message</label>
-                    <div className="form-control bg-light" style={{height: '120px', paddingTop: '8px'}}>
-                    Tell us about your project, questions, or how we can help you...
-                    </div>
+                    <input className="form-control bg-light" style={{height: '120px', paddingTop: '8px'}} placeholder="Tell us about your project, questions, or how we can help you..." name="message" required/>
+                    
                 </div>
                 
-                <button className="btn bg-gold text-white w-100 fw-medium">
+                <button type="submit" className="btn bg-gold text-white w-100 fw-medium">
                     Send Message
                 </button>
                 </div>
