@@ -53,7 +53,7 @@ export default function Home() {
       <div className="min-vh-100 container d-flex flex-column justify-content-center align-items-center text-center py-3">
         <div className="row align-items-center">
           <div className="col-sm mb-3">
-            <Fade cascade>
+            <Fade cascade direction="up">
             <h2 className="display-1 fw-bold mb-4"><span className="tp">Your Story</span>, <span className="text-warning">Our Passion</span></h2>
             <p className="">
               At Global Wisdom Printing Press, we believe every story deserves to be told.
@@ -63,7 +63,7 @@ export default function Home() {
             </Fade>
           </div>
           <div className="col-sm mb-3">
-            <Fade>
+            <Fade direction="down">
             <Image src="https://ngratesc.sirv.com/global_wisdom/boook2.jpg" height={500} width={500} className="img-fluid rounded" alt="person on a typewrite" />
             </Fade>
           </div>
@@ -72,7 +72,7 @@ export default function Home() {
       </div>
       <div className="text-center  bcc text-white d-flex align-items-center min-vh-100">
         <div className="container p-3">
-          <Fade cascade>
+          <Fade cascade direction="down">
           <h1 className="display-1  fw-bold ">Publishing Services</h1>
           <div className="row gap-3">
             <div className="col-sm rounded border shadow py-3">
@@ -104,7 +104,7 @@ export default function Home() {
       </div>
       <div className="container  text-center   min-vh-100 mb-3 ">
         <div>
-        <Fade>
+        <Fade direction="left">
         <h1 className="display-1 fw-bold tp ">Featured Publications</h1>
         <div className="row gap-3 ">
           {

@@ -16,7 +16,7 @@ const Footer=()=>{
                     <p className="fw-bold text-warning">Contact Details</p>
                     <Link href="mailto:info@globalwisdom.com" className="text-white"> info@globalwisdom.com</Link>
                     <Link href="tel:+263777358130>+263 77 735 8130" className="text-white">+263 77 735 8130</Link>
-                    <span>5 Young Road, Kingsdale Bulawayo, <br/> Zimbabwe</span>
+                    <span>Office 1, Unforgettable Building, Bulawayo <br/> Zimbabwe</span>
 
                 </div>
                 <div className="col-sm d-flex flex-column text-white">
