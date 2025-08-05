@@ -130,13 +130,16 @@ export default function Home() {
 
         </div>
       </div>
+     
       <div className="bcc">
+      <Fade cascade direction="up">
+        <div className="container py-5 text-center text-white" >
+          <h1 className="display-1 text-warning fw-bold">Ready To Share Your Story?</h1>
+          <p>Join hundreds of successful authors who have trusted Global Wisdom with their publishing journey</p>
+            <Link href="/contact" className="btn btn-outline-warning">Get started Today</Link>
+        </div>
+      </Fade>
 
-      <div className="container py-5 text-center text-white" >
-        <h1 className="display-1 text-warning fw-bold">Ready To Share Your Story?</h1>
-        <p>Join hundreds of successful authors who have trusted Global Wisdom with their publishing journey</p>
-          <Link href="/contact" className="btn btn-outline-warning">Get started Today</Link>
-      </div>
             </div>
 
 
