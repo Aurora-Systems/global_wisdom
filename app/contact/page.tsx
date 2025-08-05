@@ -102,8 +102,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="h6 fw-semibold text-navy mb-1">Email</h3>
-                      <p className="text-muted mb-1">info@globalwisdom.com</p>
-                      <p className="text-muted mb-0">submissions@globalwisdom.com</p>
+                      <p className="text-muted mb-1">info@globalwisdom.co.zw</p>
+                      <p className="text-muted mb-0">submissions@globalwisdom.co.zw</p>
                     </div>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="h6 fw-semibold text-navy mb-1">Phone</h3>
-                      <p className="text-muted mb-1">+1 (555) 123-4567</p>
-                      <p className="small text-muted mb-0">Mon-Fri, 9 AM - 6 PM EST</p>
+                      <p className="text-muted mb-1">+263 77 735 8130</p>
+                      <p className="small text-muted mb-0">Mon-Fri, 8 AM - 5 PM CAT</p>
                     </div>
                   </div>
                 </div>
@@ -132,9 +132,9 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="h6 fw-semibold text-navy mb-1">Office</h3>
-                      <p className="text-muted mb-1">123 Author Street</p>
-                      <p className="text-muted mb-1">New York, NY 10001</p>
-                      <p className="text-muted mb-0">United States</p>
+                      <p className="text-muted mb-1">Office 1, Unforgettable Building</p>
+                      <p className="text-muted mb-1">Bulawayo</p>
+                      <p className="text-muted mb-0">Zimbabwe</p>
                     </div>
                   </div>
                 </div>
