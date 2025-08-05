@@ -1,5 +1,35 @@
 "use client"
+import emailjs from "@emailjs/browser"
+import { useState, useRef } from "react";
+import  {FormEvent} from "react"
 export default function Contact() {
+    const form:any = useRef(null)
+    const [loading,set_loading] = useState<boolean>(false)
+
+   const sendEmail = (e:FormEvent) => {
+    e.preventDefault();
+    set_loading(true)
+    console.log(e)
+    emailjs
+      .sendForm("service_z2itpxa", "template_w5ed6u8", form.current, {
+        publicKey: "XgsKVLLFRaudshWcX",
+      })
+      .then(
+        () => {
+          alert("Message Sent Successfully");
+          form.current.reset()
+        },
+        (error) => {
+          console.log(error)
+          alert("Message Not Sent");
+
+        },
+      ).finally(()=>{
+        set_loading(false)
+      })
+  };
+
+
   return (
     <div>
       {/* Bootstrap CSS CDN - Include this in your HTML head */}
@@ -45,119 +75,121 @@ export default function Contact() {
 
       {/* Contact Form & Info */}
       <section className="container my-5">
-        <div className="row g-5">
-          {/* Contact Form */}
-          <div className="col-lg-6">
-            <h2 className="h3 fw-bold mb-4 tp">Send Us a Message</h2>
-            <div>
-              <div className="row g-3 mb-3">
-                <div className="col-md-6">
-                  <label className="form-label fw-medium text-navy">First Name</label>
-                  <div className="form-control bg-light">Your first name</div>
+        <form ref={form} onSubmit={sendEmail}>
+            <div className="row g-5">
+            {/* Contact Form */}
+            <div className="col-lg-6">
+                <h2 className="h3 fw-bold mb-4 tp">Send Us a Message</h2>
+                <div>
+                <div className="row g-3 mb-3">
+                    <div className="col-md-6">
+                    <label className="form-label fw-medium text-navy">First Name</label>
+                    <input/>
+                    </div>
+                    <div className="col-md-6">
+                    <label className="form-label fw-medium text-navy">Last Name</label>
+                    <div className="form-control bg-light">Your last name</div>
+                    </div>
                 </div>
-                <div className="col-md-6">
-                  <label className="form-label fw-medium text-navy">Last Name</label>
-                  <div className="form-control bg-light">Your last name</div>
+                
+                <div className="mb-3">
+                    <label className="form-label fw-medium text-navy">Email</label>
+                    <div className="form-control bg-light">your.email@example.com</div>
                 </div>
-              </div>
-              
-              <div className="mb-3">
-                <label className="form-label fw-medium text-navy">Email</label>
-                <div className="form-control bg-light">your.email@example.com</div>
-              </div>
-              
-              <div className="mb-3">
-                <label className="form-label fw-medium text-navy">Phone</label>
-                <div className="form-control bg-light">Your phone number</div>
-              </div>
-              
-              <div className="mb-3">
-                <label className="form-label fw-medium text-navy">Service Interest</label>
-                <div className="form-control bg-light">Select a service</div>
-              </div>
-              
-              <div className="mb-3">
-                <label className="form-label fw-medium text-navy">Message</label>
-                <div className="form-control bg-light" style={{height: '120px', paddingTop: '8px'}}>
-                  Tell us about your project, questions, or how we can help you...
+                
+                <div className="mb-3">
+                    <label className="form-label fw-medium text-navy">Phone</label>
+                    <div className="form-control bg-light">Your phone number</div>
                 </div>
-              </div>
-              
-              <button className="btn bg-gold text-white w-100 fw-medium">
-                Send Message
-              </button>
+                
+                <div className="mb-3">
+                    <label className="form-label fw-medium text-navy">Service Interest</label>
+                    <div className="form-control bg-light">Select a service</div>
+                </div>
+                
+                <div className="mb-3">
+                    <label className="form-label fw-medium text-navy">Message</label>
+                    <div className="form-control bg-light" style={{height: '120px', paddingTop: '8px'}}>
+                    Tell us about your project, questions, or how we can help you...
+                    </div>
+                </div>
+                
+                <button className="btn bg-gold text-white w-100 fw-medium">
+                    Send Message
+                </button>
+                </div>
             </div>
-          </div>
 
-          {/* Contact Information */}
-          <div className="col-lg-6">
-            <h2 className="h3 fw-bold mb-4 tp">Contact Information</h2>
-            
-            <div className="d-flex flex-column gap-4">
-              <div className="card">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-start">
-                    <div className="icon-circle me-3">
-                      <span style={{fontSize: '1.25rem'}}>📧</span>
+            {/* Contact Information */}
+            <div className="col-lg-6">
+                <h2 className="h3 fw-bold mb-4 tp">Contact Information</h2>
+                
+                <div className="d-flex flex-column gap-4">
+                <div className="card">
+                    <div className="card-body p-4">
+                    <div className="d-flex align-items-start">
+                        <div className="icon-circle me-3">
+                        <span style={{fontSize: '1.25rem'}}>📧</span>
+                        </div>
+                        <div>
+                        <h3 className="h6 fw-semibold text-navy mb-1">Email</h3>
+                        <p className="text-muted mb-1">info@globalwisdom.co.zw</p>
+                        <p className="text-muted mb-0">submissions@globalwisdom.co.zw</p>
+                        </div>
                     </div>
-                    <div>
-                      <h3 className="h6 fw-semibold text-navy mb-1">Email</h3>
-                      <p className="text-muted mb-1">info@globalwisdom.co.zw</p>
-                      <p className="text-muted mb-0">submissions@globalwisdom.co.zw</p>
                     </div>
-                  </div>
                 </div>
-              </div>
 
-              <div className="card">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-start">
-                    <div className="icon-circle me-3">
-                      <span style={{fontSize: '1.25rem'}}>📞</span>
+                <div className="card">
+                    <div className="card-body p-4">
+                    <div className="d-flex align-items-start">
+                        <div className="icon-circle me-3">
+                        <span style={{fontSize: '1.25rem'}}>📞</span>
+                        </div>
+                        <div>
+                        <h3 className="h6 fw-semibold text-navy mb-1">Phone</h3>
+                        <p className="text-muted mb-1">+263 77 735 8130</p>
+                        <p className="small text-muted mb-0">Mon-Fri, 8 AM - 5 PM CAT</p>
+                        </div>
                     </div>
-                    <div>
-                      <h3 className="h6 fw-semibold text-navy mb-1">Phone</h3>
-                      <p className="text-muted mb-1">+263 77 735 8130</p>
-                      <p className="small text-muted mb-0">Mon-Fri, 8 AM - 5 PM CAT</p>
                     </div>
-                  </div>
                 </div>
-              </div>
 
-              <div className="card">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-start">
-                    <div className="icon-circle me-3">
-                      <span style={{fontSize: '1.25rem'}}>📍</span>
+                <div className="card">
+                    <div className="card-body p-4">
+                    <div className="d-flex align-items-start">
+                        <div className="icon-circle me-3">
+                        <span style={{fontSize: '1.25rem'}}>📍</span>
+                        </div>
+                        <div>
+                        <h3 className="h6 fw-semibold text-navy mb-1">Office</h3>
+                        <p className="text-muted mb-1">Office 1, Unforgettable Building</p>
+                        <p className="text-muted mb-1">Bulawayo</p>
+                        <p className="text-muted mb-0">Zimbabwe</p>
+                        </div>
                     </div>
-                    <div>
-                      <h3 className="h6 fw-semibold text-navy mb-1">Office</h3>
-                      <p className="text-muted mb-1">Office 1, Unforgettable Building</p>
-                      <p className="text-muted mb-1">Bulawayo</p>
-                      <p className="text-muted mb-0">Zimbabwe</p>
                     </div>
-                  </div>
                 </div>
-              </div>
 
-              <div className="card">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-start">
-                    <div className="icon-circle me-3">
-                      <span style={{fontSize: '1.25rem'}}>⏰</span>
+                <div className="card">
+                    <div className="card-body p-4">
+                    <div className="d-flex align-items-start">
+                        <div className="icon-circle me-3">
+                        <span style={{fontSize: '1.25rem'}}>⏰</span>
+                        </div>
+                        <div>
+                        <h3 className="h6 fw-semibold text-navy mb-1">Business Hours</h3>
+                        <p className="text-muted mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p className="text-muted mb-1">Saturday: 10:00 AM - 4:00 PM</p>
+                        <p className="text-muted mb-0">Sunday: Closed</p>
+                        </div>
                     </div>
-                    <div>
-                      <h3 className="h6 fw-semibold text-navy mb-1">Business Hours</h3>
-                      <p className="text-muted mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p className="text-muted mb-1">Saturday: 10:00 AM - 4:00 PM</p>
-                      <p className="text-muted mb-0">Sunday: Closed</p>
                     </div>
-                  </div>
                 </div>
-              </div>
+                </div>
             </div>
-          </div>
-        </div>
+            </div>
+        </form>
       </section>
 
       {/* FAQ Section */}
