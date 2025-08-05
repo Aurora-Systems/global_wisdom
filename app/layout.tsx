@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Gentium_Book_Plus, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 import Navbar from "./components/navabar_component";
 import Footer from "./components/footer";
 
-const gentiumBookPlus = Gentium_Book_Plus({
-  weight: ["400", "700"],
-  variable: "--font-gentium-book-plus",
-  subsets: ["latin"],
-  style: "normal",
-});
+
 
 const mont = Montserrat({
   variable: "--font-montserrat",
