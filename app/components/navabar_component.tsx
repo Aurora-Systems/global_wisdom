@@ -87,7 +87,7 @@ const Navbar = () => {
 
           {/* Call Button (Desktop) */}
           <div className="d-none d-md-block">
-            <Link href="tel:+1234567890">
+            <Link href="/contact">
               <button className="btn btn-outline-warning fw-bold ">
                 Get Published
               </button>
