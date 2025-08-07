@@ -39,3 +39,13 @@ a{
   text-decoration: none !important;
 
 }
+
+.pbtn{
+  background-color: var(--pc);
+  color: white;
+}
+
+.pbtn:hover{
+  color: yellow !important;
+  background-color: var(--pc);
+}
