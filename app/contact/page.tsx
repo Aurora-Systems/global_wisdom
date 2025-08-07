@@ -11,8 +11,8 @@ export default function Contact() {
     set_loading(true)
     console.log(e)
     emailjs
-      .sendForm("service_z2itpxa", "template_w5ed6u8", form.current, {
-        publicKey: "XgsKVLLFRaudshWcX",
+      .sendForm("service_o61m0en", "template_toru4mn", form.current, {
+        publicKey: "gRorSRs9b_2tSpDqt",
       })
       .then(
         () => {
@@ -102,6 +102,7 @@ export default function Contact() {
                 <div className="mb-3">
                     <label className="form-label fw-medium text-navy">Service Interest</label>
                     <select className="form-control" name="subject" required>
+                      <option></option>
                       <option value="publishing">Book Publishing</option>
                     <option value="editing">Editorial Services</option>
                     <option value="marketing">Book Marketing</option>
@@ -117,7 +118,7 @@ export default function Contact() {
                     
                 </div>
                 
-                <button type="submit" className="btn bg-gold text-white w-100 fw-medium">
+                <button type="submit" disabled={loading} className="btn bg-gold text-white w-100 fw-medium">
                     Send Message
                 </button>
                 </div>
@@ -182,7 +183,7 @@ export default function Contact() {
                         </div>
                         <div>
                         <h3 className="h6 fw-semibold text-navy mb-1">Business Hours</h3>
-                        <p className="text-muted mb-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                        <p className="text-muted mb-1">Monday - Friday: 8:00 AM - 5:00 PM</p>
                         <p className="text-muted mb-1">Saturday: 10:00 AM - 4:00 PM</p>
                         <p className="text-muted mb-0">Sunday: Closed</p>
                         </div>
