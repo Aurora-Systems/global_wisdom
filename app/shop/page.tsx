@@ -1,23 +1,29 @@
+"use client"
 import { Fade } from "react-awesome-reveal";
 import { db } from "../init/supabase";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-export default async function Shop(){
+export default function Shop(){
+    const [data,set_data] = useState<Array<any>>([])
     const fetch_data = async () => {
         const { data, error } = await db.from("items").select("*, categories(*)").eq("user_id","kp_102df5c03f7d4b52b7b0bef49571f523");
         if(!error) {
-            return data
+           set_data(data)
         }else{
-            return []
+            set_data([])
     }
 }
-    const data =  await fetch_data()
+    
 
 
 const ShowImage=(value:string)=>{
     return db.storage.from("images").getPublicUrl(value).data.publicUrl
 }
 
+useEffect(()=>{
+    fetch_data()
+},[])
 
     return(
         <div className="Container   mb-5 min-vh-100">
