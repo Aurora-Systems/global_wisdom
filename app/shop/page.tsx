@@ -39,7 +39,7 @@ const ShowImage=(value:string)=>{
                     data.map((item,index)=>{
                         console.log(item)
                         return(
-                            <div className="col-md-3 col-sm rounded shadow gap-3 p-2">
+                            <div className="col-md-3 col-sm rounded shadow gap-3 p-2" key={`${index}23`}>
                                 <div style={{
                                     backgroundImage: `url(${ShowImage(item.image_id)})`,
                                     height:"250px",
