@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="navbar-brand">
             <Link href="/" className="text-decoration-none text-dark fw-bold d-flex flex-row align-items-center gap-2">
               <Image 
-                src="https://ngratesc.sirv.com/global_wisdom/logo.png" 
+                src="https://cdn.clipond.com/global_wisdom/logo.png" 
                 className="img-fluid" 
                 width={50} 
                 height={50} 
