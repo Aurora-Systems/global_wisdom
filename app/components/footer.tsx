@@ -8,7 +8,7 @@ const Footer=()=>{
 
             <div className="row  justify-content-center container  ">
                 <div className="col-sm">
-                    <Image src="https://ngratesc.sirv.com/global_wisdom/logo.png" className="img_invert img_fluid" height={60}  width={70} alt="logo"/>
+                    <Image src="https://cdn.clipond.com/global_wisdom/logo.png" className="img_invert img_fluid" height={60}  width={70} alt="logo"/>
                     <br/>
                     <span>Empowering authors worldwide since 2017. Your story deserves to be told.</span>
                 </div>
