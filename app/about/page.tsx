@@ -23,7 +23,7 @@ export default function About(){
                 
                 </div>
                  <div className="col-sm text-center">
-                    <Image src="https://ngratesc.sirv.com/global_wisdom/logo.png" className="img-fluid" width={400} height={400} alt="logo for global wisdom"/>
+                    <Image src="https://cdn.clipond.com/global_wisdom/logo.png" className="img-fluid" width={400} height={400} alt="logo for global wisdom"/>
                 </div>
             </div>
             </Fade>
