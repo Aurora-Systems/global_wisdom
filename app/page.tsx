@@ -7,25 +7,25 @@ export default function Home() {
   const sample_data = [
     {
     title: "After The Burial",
-    img:"https://ngratesc.sirv.com/global_wisdom/book3.jpg",
+    img:"https://cdn.clipond.com/global_wisdom/book3.jpg",
     author:"Author Name",
     price: "$15,00"
   },
    {
     title: "Just Trust God My Brother",
-    img:"https://ngratesc.sirv.com/global_wisdom/boook2.jpg",
+    img:"https://cdn.clipond.com/global_wisdom/boook2.jpg",
     author:"Author Name",
     price: "$15,00"
   },
    {
     title: "Dear World",
-    img:"https://ngratesc.sirv.com/global_wisdom/File.jpg",
+    img:"https://cdn.clipond.com/global_wisdom/File.jpg",
     author:"Author Name",
     price: "$15,00"
   },
    {
     title: "The Highway Code Of Life",
-    img:"https://ngratesc.sirv.com/global_wisdom/book.jpg",
+    img:"https://cdn.clipond.com/global_wisdom/book.jpg",
     author:"Author Name",
     price: "$15,00"
   }
@@ -47,7 +47,7 @@ export default function Home() {
 
         </div>
         </Fade>
-        <video className="video" src="https://ngratesc.sirv.com/global_wisdom/6143904-sd_960_506_25fps.mp4" muted preload="true" loop autoPlay={true}></video>
+        <video className="video" src="https://cdn.clipond.com/global_wisdom/6143904-sd_960_506_25fps.mp4" muted preload="true" loop autoPlay={true}></video>
 
       </main>
       <div className="min-vh-100 container d-flex flex-column justify-content-center align-items-center text-center py-3">
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div className="col-sm mb-3">
             <Fade direction="down">
-            <Image src="https://ngratesc.sirv.com/global_wisdom/boook2.jpg" height={500} width={500} className="img-fluid rounded" alt="person on a typewrite" />
+            <Image src="https://cdn.clipond.com/global_wisdom/boook2.jpg" height={500} width={500} className="img-fluid rounded" alt="person on a typewrite" />
             </Fade>
           </div>
         </div>
